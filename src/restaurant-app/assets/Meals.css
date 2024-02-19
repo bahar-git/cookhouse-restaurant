@@ -1,0 +1,147 @@
+.mealsContainer {
+  text-align: center;
+  width: 95%;
+  margin: 30px auto 50px;
+}
+
+.card {
+  box-shadow: 7px 7px var(--primary-color);
+  background-color: var(--card-color);
+  margin: 20px 0;
+}
+
+.imgWrapper {
+  width: 100%;
+  margin: auto;
+}
+
+.imgWrapper img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.card-title,
+.mealsContainer h2 {
+  font-family: "Protest Riot", sans-serif;
+}
+
+.card .card-body {
+  padding: 5px;
+  font-size: 12px;
+  position: relative;
+}
+
+.ingredients {
+  font-weight: bold;
+}
+
+.read {
+  color: var(--grey-color);
+  cursor: pointer;
+}
+
+.price {
+  margin: 15px;
+}
+
+.addBtn {
+  background-color: var(--primary-color);
+  border: none;
+  font-size: 12px;
+  transition: 300ms ease-in-out;
+}
+
+.addBtn:hover {
+  background-color: var(--secondary-color);
+  transform: scale(0.95);
+}
+
+@media screen and (min-width: 250px) {
+  .mealsContainer {
+    width: 85%;
+  }
+  .card .card-body {
+    padding: 10px;
+  }
+  .price {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 350px) {
+  .mealsContainer {
+    width: 75%;
+  }
+  .card-title,
+  .price {
+    font-size: 18px;
+  }
+  .card .card-body,
+  .addBtn {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .mealsContainer {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .mealsContainer {
+    width: 31rem;
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+  }
+  .imgWrapper {
+    width: 45%;
+    text-align: start;
+  }
+  .imgWrapper img {
+    border-radius: 5px 0 0 5px;
+  }
+  .card .card-body {
+    padding-top: 15px;
+    width: 50%;
+  }
+
+  /* .addBtn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  .openReadBtn {
+    position: relative;
+    margin-top: 10px;
+  } */
+}
+
+@media screen and (min-width: 850px) {
+  .mealsContainer {
+    width: 95%;
+  }
+  .mealsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .card {
+    width: 48%;
+    height: 100%;
+  }
+  .openRead {
+    height: fit-content;
+  }
+  .imgWrapper img {
+    height: 13.5em;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .mealsContainer {
+    width: 65rem;
+  }
+}

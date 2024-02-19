@@ -1,0 +1,157 @@
+.aboutContainer {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.aboutHeadWrapper {
+  font-family: "Protest Riot", sans-serif;
+  margin: 30px 0 50px;
+}
+
+.aboutHeadWrapper h6 {
+  color: var(--primary-color);
+}
+
+.imgAboutWrapper {
+  position: relative;
+}
+
+.beef-pie-pic,
+.lady-cook-pic {
+  width: 70%;
+  margin: auto;
+}
+
+.lady-cook-pic {
+  width: 50%;
+  position: relative;
+  top: -30px;
+  left: 30px;
+}
+
+.beef-pie-pic img,
+.lady-cook-pic img {
+  width: 100%;
+}
+
+.quote {
+  font-family: "Protest Riot", sans-serif;
+  font-size: 12px;
+  padding: 0 5px 10px;
+}
+
+.quote span {
+  font-family: "Times New Roman", Times, serif;
+  margin-left: 10px;
+}
+
+.storyWrapper {
+  font-size: 12px;
+  box-shadow: 0px 0px 10px 2px var(--secondary-color);
+  border-radius: 5px;
+  margin-bottom: 50px;
+  padding: 20px 5px;
+}
+
+.ladyPieImagesWrapper {
+  margin-bottom: 30px;
+}
+
+.imageLadyPie,
+.imageCatLadyMan {
+  width: 80%;
+  margin: 20px auto;
+  font-size: 12px;
+}
+
+.imageLadyPie img,
+.imageCatLadyMan img {
+  width: 100%;
+}
+
+@media screen and (min-width: 250px) {
+  .lady-cook-pic {
+    top: -50px;
+    left: 50px;
+  }
+  .quote,
+  .storyWrapper,
+  .imageLadyPie,
+  .imageCatLadyMan {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 350px) {
+  .aboutContainer {
+    width: 85%;
+  }
+  .imgAboutWrapper {
+    width: 20rem;
+    margin: auto;
+  }
+  .lady-cook-pic {
+    top: -70px;
+    left: 70px;
+  }
+  .quote,
+  .imageLadyPie,
+  .imageCatLadyMan {
+    font-size: 18px;
+    padding: 0 20px 20px;
+  }
+  .storyWrapper {
+    font-size: 18px;
+    padding: 30px;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .ladyPieImagesWrapper {
+    width: 25rem;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .aboutContainer {
+    width: 90%;
+  }
+  .imgAboutWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+  }
+  .imagesWrapper {
+    width: 40%;
+  }
+  .quote {
+    width: 55%;
+    padding-top: 50px;
+  }
+  .ladyPieImagesWrapper {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .imageLadyPie img,
+  .imageCatLadyMan img {
+    height: 14em;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .imgAboutWrapper {
+    width: 43em;
+    margin: auto;
+  }
+  .storyWrapper {
+    width: 80%;
+    margin: 0 auto 50px;
+  }
+  .ladyPieImagesWrapper {
+    width: 35rem;
+  }
+}

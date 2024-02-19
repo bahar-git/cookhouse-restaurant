@@ -1,0 +1,138 @@
+.tableWrapper {
+  display: none;
+}
+
+.bagContainer h2 {
+  font-family: "Protest Riot", sans-serif;
+  text-align: center;
+  margin: 30px;
+}
+
+.ordersWrapper {
+  border-bottom: 1px solid var(--primary-color);
+  width: 95%;
+  margin: 20px auto;
+  display: flex;
+  gap: 5px;
+}
+
+.calcWrapper p {
+  margin: 0;
+  font-size: 10px;
+}
+
+.calcWrapper {
+  width: 60%;
+  position: relative;
+}
+
+.calcWrapper :first-child {
+  font-weight: bold;
+}
+
+.imgTdWrapper {
+  width: 50px;
+}
+
+.imgTdWrapper img {
+  width: 100%;
+}
+
+.btnRemove {
+  background-color: var(--primary-color);
+  border: none;
+  font-size: 10px;
+  padding: 2px 5px;
+  width: 20px;
+  height: 20px;
+  transition: 300ms ease-in-out;
+}
+
+.btnRemove:hover {
+  background-color: var(--secondary-color);
+  transform: scale(0.95);
+}
+
+.bagContainer h4 {
+  text-align: center;
+  margin: 20px auto 50px;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 180px) {
+  .ordersWrapper {
+    gap: 10px;
+  }
+  .calcWrapper p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 270px) {
+  .ordersWrapper {
+    width: 90%;
+  }
+  .imgTdWrapper {
+    width: 70px;
+  }
+  .calcWrapper p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .ordersWrapper {
+    width: 80%;
+  }
+  .btnRemove {
+    font-size: 12px;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .ordersListContainer {
+    display: none;
+  }
+  .tableWrapper {
+    display: block;
+    width: 95%;
+    margin: 20px auto;
+    --bs-table-bg: var(--body-color);
+  }
+  .table {
+    --bs-table-bg: var(--body-color);
+  }
+  thead,
+  tbody {
+    border-color: var(--primary-color);
+  }
+  tbody .quant {
+    text-align: center;
+  }
+  .btnRemove {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .tableWrapper {
+    width: 85%;
+  }
+  .btnRemove {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .tableWrapper {
+    width: 42rem;
+  }
+  .table {
+    font-size: 18px;
+  }
+  .btnRemove {
+    margin-left: 30px;
+  }
+}

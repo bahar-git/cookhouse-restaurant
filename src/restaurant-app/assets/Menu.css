@@ -1,0 +1,33 @@
+/* .d-flex {
+  position: relative;
+} */
+
+.menuDropdown {
+  background-color: transparent;
+  --bs-btn-active-bg: transparent;
+  border: none;
+  padding: 0;
+}
+
+.menuDropdown:hover {
+  background-color: transparent;
+}
+
+.menuDropList {
+  background-color: rgb(193, 154, 107);
+}
+
+.linkDropList {
+  text-decoration: none;
+}
+
+.dropdown-item {
+  color: white;
+  font-weight: bold;
+}
+
+.linkDropList .dropdown-item:hover,
+.activeDropList {
+  background-color: rgb(239, 223, 187);
+  color: rgb(152, 118, 84);
+}
