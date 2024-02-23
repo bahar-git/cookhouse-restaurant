@@ -1,5 +1,5 @@
 import "../assets/Header.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import { Menu } from "./Menu";
@@ -9,6 +9,9 @@ import { Navbar, Offcanvas, OffcanvasHeader, OffcanvasBody } from "reactstrap";
 export const Header = () => {
   const navNamesData = useSelector((state) => state?.navNames?.navNames);
   const [isOpen, setIsOpen] = useState(false);
+
+  const bagData = JSON.parse(localStorage.getItem("bagData"));
+  const quantityInBag = bagData.length;
 
   const loc = useLocation();
   const pathName = loc.pathname.slice(1);
@@ -42,7 +45,7 @@ export const Header = () => {
               {navNamesData?.names?.length > 0 &&
                 navNamesData.names.map((item, index) => {
                   return item === "Menu" ? (
-                    <Menu handleOpen={handleOpen} />
+                    <Menu handleOpen={handleOpen} key={index} />
                   ) : (
                     <Link
                       key={index}
@@ -56,7 +59,14 @@ export const Header = () => {
                           : "linkCanvas"
                       }
                     >
-                      <h6>{item}</h6>
+                      {item === "Bag" ? (
+                        <div className="wrapperQuantityBag">
+                          <span className="quantityBag">{quantityInBag}</span>
+                          <h6>{item}</h6>
+                        </div>
+                      ) : (
+                        <h6>{item}</h6>
+                      )}
                     </Link>
                   );
                 })}
@@ -68,7 +78,7 @@ export const Header = () => {
           {navNamesData?.names?.length > 0 &&
             navNamesData.names.map((item, index) => {
               return item === "Menu" ? (
-                <Menu />
+                <Menu key={index} />
               ) : (
                 <Link
                   key={index}
@@ -81,7 +91,14 @@ export const Header = () => {
                       : "linkNavs"
                   }
                 >
-                  <h6>{item}</h6>
+                  {item === "Bag" ? (
+                    <div className="wrapperQuantityBag">
+                      <span className="quantityBag">{quantityInBag}</span>
+                      <h6>{item}</h6>
+                    </div>
+                  ) : (
+                    <h6>{item}</h6>
+                  )}
                 </Link>
               );
             })}

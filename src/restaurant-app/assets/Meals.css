@@ -4,6 +4,14 @@
   margin: 30px auto 50px;
 }
 
+.drinkType {
+  margin: 40px auto 0;
+}
+
+.drinkType::first-letter {
+  text-transform: uppercase;
+}
+
 .card {
   box-shadow: 7px 7px var(--primary-color);
   background-color: var(--card-color);

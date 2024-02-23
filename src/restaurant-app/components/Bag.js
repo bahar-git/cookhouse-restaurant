@@ -19,6 +19,7 @@ export const Bag = () => {
     const filteredData = bagData.filter((item) => item.idMeal !== id);
     setFilteredBagData(filteredData);
     localStorage.setItem("bagData", JSON.stringify(filteredData));
+    alert("Deleted successfully!");
   };
 
   const totalPrice = filteredBagData?.reduce((accum, currVal) => {

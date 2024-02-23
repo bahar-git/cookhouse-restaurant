@@ -17,7 +17,6 @@ export const Menu = ({ handleOpen }) => {
   const toggle = () => setDropdownOpen((prevState) => !prevState);
 
   const [menuCategory, setMenuCategory] = useState([]);
-  // const [valueDropdown, setValueDropdown] = useState("");
 
   const stateData = useSelector((state) => state.meals);
   const data = stateData?.dataMeals?.data || [];
@@ -46,16 +45,6 @@ export const Menu = ({ handleOpen }) => {
     getCategories();
   }, [dropdownOpen, menuCategory, data]);
 
-  // -----------------------------------------------------
-
-  /*  const handleMenuDropdown = (e) => {
-    const value = e.target.value;
-    setValueDropdown(value);
-    dispatch(getMenuCategory(value));
-  }; */
-
-  // -----------------------------------------------------
-
   return (
     <section className="d-flex">
       <Dropdown isOpen={dropdownOpen} toggle={toggle}>
@@ -76,12 +65,11 @@ export const Menu = ({ handleOpen }) => {
               <Link
                 to={`/Menu/${item}`}
                 value={item}
-                // onClick={handleMenuDropdown}
                 onClick={handleOpen}
                 className="linkDropList"
+                key={index}
               >
                 <DropdownItem
-                  key={index}
                   className={pathName.includes(item) ? "activeDropList" : ""}
                 >
                   {item}
