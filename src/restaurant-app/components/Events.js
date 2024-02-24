@@ -20,7 +20,7 @@ export const Events = () => {
         precisely to your needs. Our culinary expertise, paired with innovative
         catering and flawless service, ensures that Chicago's finest chef-driven
         cuisine is delivered to every table where you gather. At our core, we
-        believe that sharing a meal is more than just nourishment; it's an
+        believe that sharing a meal is more than just nourishment, it's an
         opportunity to create lasting memories, foster connections, and
         celebrate life's precious moments together. Let us be a part of your
         special occasions, where every bite tells a story and every dish is
