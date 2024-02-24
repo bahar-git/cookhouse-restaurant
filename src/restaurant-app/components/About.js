@@ -65,10 +65,10 @@ export const About = () => {
             dream.
           </p>
           <p>
-            In 2021, armed with love and determination, Betty launched her cafe,
-            offering patrons a taste of her cherished family recipe. Today, her
-            cafe stands as a testament to love, resilience, and the
-            transformative power of sharing a meal with others.
+            In 2021, armed with love and determination, Betty launched her
+            restaurant, offering patrons a taste of her cherished family recipe.
+            Today, her restaurant stands as a testament to love, resilience, and
+            the transformative power of sharing a meal with others.
           </p>
         </section>
 

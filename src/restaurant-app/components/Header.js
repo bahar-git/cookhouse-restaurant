@@ -1,5 +1,5 @@
 import "../assets/Header.css";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import { Menu } from "./Menu";
@@ -10,11 +10,28 @@ export const Header = () => {
   const navNamesData = useSelector((state) => state?.navNames?.navNames);
   const [isOpen, setIsOpen] = useState(false);
 
-  const bagData = JSON.parse(localStorage.getItem("bagData"));
-  const quantityInBag = bagData.length;
-
   const loc = useLocation();
   const pathName = loc.pathname.slice(1);
+
+  // ----------------------------------
+  /*  const [quantityInBag, setQuantityInBag] = useState(0);
+  const bagData = JSON.parse(localStorage.getItem("bagData"));
+  const getQuantity = () => {
+    const quantityCalc = bagData.reduce((accum, currVal) => {
+      accum += currVal.quantity;
+      return accum;
+    }, 0);
+    setQuantityInBag(quantityCalc);
+  };
+  useEffect(() => {
+    getQuantity();
+  }, [bagData]); */
+  const bagData = JSON.parse(localStorage.getItem("bagData"));
+  const quantityInBag = bagData.reduce((accum, currVal) => {
+    accum += currVal.quantity;
+    return accum;
+  }, 0);
+  // ---------------------------------
 
   const handleOpen = () => {
     setIsOpen(false);
